@@ -16,22 +16,35 @@ else:
 
 
 
-
+""" 
 Total = 0
 Duped = 0
-(yest, tod) = ("C.C.C.C.C", "CCCCCCCCC")
+(yest, tod) = ("CC.C...", "..CC...")
 Space = (yest, tod)
 YEST = list(yest)
 TOD = list(tod)
+
 for char in YEST:
     Total += 1
     print (Total)
-for i in range(Total + 1):
+
+for i in range (0, Total):
     if YEST[i] == "C" and TOD[i] == "C":
-        Duped += 1 
+        Duped += 1
 print(Duped)
 
         
+ """
+
+""" Duped = 0
+(yest, tod) = ("CCCCCCC", "C.C.C.C")
+
+for i in range (len(yest)):
+    if yest[i] == "C" and tod[i] == "C":
+        Duped += 1
+print(Duped)
+ """
+
 
 
 
