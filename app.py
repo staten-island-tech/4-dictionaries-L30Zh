@@ -46,6 +46,34 @@ print(Duped)
  """
 
 
+""" 
+l = 0
+notl = 0
+x = input("Yo yo what you gotta say?")
+for i in range (len(x)):
+    if x[i] == "l":
+        l += 1
+    elif x[i] in "qwertyuiopasdfghjkzxcvbnm":
+        notl += 1
+   
+if l >= (notl / 5):
+    print ("Love Letter")
+else:
+    print ("Just talking")
+ """
 
-
-    
+Total = 0
+HONI = 0
+Clause = ("HONIHONIOHINOHIONOOHIONIOHIOINOHIOHIONIH")
+length = (len(Clause))
+for i in range (length):
+    if Clause[i] == "H" and HONI == 0:
+        HONI += 1
+    if Clause[i] == "O" and HONI == 1:
+        HONI += 1
+    if Clause[i] == "N" and HONI == 2:
+        HONI += 1
+    if Clause[i] == "I" and HONI == 3:
+        HONI = 0
+        Total += 1
+print (Total)
