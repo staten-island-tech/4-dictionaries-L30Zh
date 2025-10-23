@@ -80,7 +80,7 @@ print (Total)
  """
 
 
-
+""" 
 
 x = input("Gimmie password")
 length = len(x)
@@ -121,4 +121,48 @@ else:
 if Valid == True:
     print ("Valid")
 elif Valid == False:
-    print ("Invalid")
+    print ("Invalid") """
+
+
+
+""" m1 = 10
+m2 = 62
+m3 = 35
+Total = 1003
+Totalp = 0
+Broke = False
+
+while Broke == False:
+    Total -= 1
+    m1 += 1
+    Totalp += 1
+    if m1 == 35:
+        Total += 30
+    if Total == 0:
+        Broke = True
+    if Broke == True:
+        break
+        Total -= 1
+    m2 += 1
+    Totalp += 1
+    if m2 == 100:
+        Total += 60
+    if Total == 0:
+        Broke = True
+    if Broke == True:
+        break
+    Total -= 1
+    m3 += 1
+    Totalp += 1
+    if m3 == 10:
+        Total += 9
+    if Total == 0:
+        Broke = True
+    if Broke == True:
+        break 
+
+print (f"She played {Totalp} games before she went broke")
+print (m1)
+print (m2)
+print (m3)
+print (Total) """
