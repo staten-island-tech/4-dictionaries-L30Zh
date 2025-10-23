@@ -62,9 +62,9 @@ else:
     print ("Just talking")
  """
 
-Total = 0
+""" Total = 0
 HONI = 0
-Clause = ("HONIHONIOHINOHIONOOHIONIOHIOINOHIOHIONIH")
+Clause = ("HONHINOHINOHINOHINOIHONIOHINOHINOHIONIHONIOHINOIHONIHONIOHINOHINOHIONHONIHONIOHNIOHNIHONIOHINHONHONIOHNOHIONIHONIHOINHOINOHINHOINOHINOHIONIHONIOHINOHIONHIOHNIO")
 length = (len(Clause))
 for i in range (length):
     if Clause[i] == "H" and HONI == 0:
@@ -77,3 +77,48 @@ for i in range (length):
         HONI = 0
         Total += 1
 print (Total)
+ """
+
+
+
+
+x = input("Gimmie password")
+length = len(x)
+char = False
+Cap = 0
+Capital = False
+Low = 0
+Lowercase = False
+Dig = 0
+Digit = False
+Invalid = False
+Valid = False
+
+for i in range (length):
+    if x[i] in ("abcdefghijklmnopqrstuvwxyz"):
+        Low += 1
+    elif x[i] in ("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
+        Cap += 1
+    elif x[i] in ("1234567890"):
+        Dig += 1
+    else:
+        Invalid = True
+
+if Low >= 2:
+    Lowercase = True
+if Cap >= 3:
+    Capital = True
+if Dig >= 1:
+    Digit = True
+if length >= 8 and length <=12:
+    char = True
+
+if Lowercase == True and Capital == True and Digit == True and char == True and Invalid == False:
+    Valid = True
+else:
+    Valid = False
+
+if Valid == True:
+    print ("Valid")
+elif Valid == False:
+    print ("Invalid")
