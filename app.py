@@ -1,79 +1,90 @@
-""" english = 't' or 'T'
-french = 's' or 'S'
-t_count = 0
-s_count = 0
-clause = input("What you wanna say") 
-for char in clause:
-        if char == english:
-            t_count += 1
-        elif char == french:
-            s_count += 1
-if s_count < t_count:
-            print("English")
-else:
-    print ("French") """
+items = [
+{
+"name": "banana",
+ "price": 0.50,
+ "category": "Grocery",
+ "description": "Long yellow thang"},
+
+{
+"name": "apple",
+ "price": 1.00,
+ "category": "Grocery",
+ "description": "Keeps the doctor away"},
+
+{
+"name": "watermelon",
+ "price": 4.00,
+ "category": "Grocery",
+ "description": "Big green fruit"},
+
+ {
+"name": "microwave",
+ "price": 80.00,
+ "category": "Technology",
+ "description": "Heats food"},
+
+{
+"name": "air fryer",
+ "price": 35.00,
+ "category": "Technology",
+ "description": "Relic of maan"},
+
+{
+"name": "tv remote",
+ "price": 15.00,
+ "category": "Technology",
+ "description": "It's a remote for your tv"},
+
+{
+"name": "bird",
+ "price": 50.00,
+ "category": "livestock",
+ "description": "Sneaky winged cat"},
+
+{
+"name": "cat",
+"price": 1250.00,
+"category": "livestock",
+"description": "Liquid with sentient thoughts",},
+
+{
+"name": "hamster",
+ "price": 25.00,
+ "category": "livestock",
+ "description": "Socially accepted mouse"}
+
+]
+
+
+Price = 0
+cart = []
+done = False
+ItemReal = False
+for index, item in enumerate(items):
+    print (index, ":", item["name"])
+while done == False:
+    x = input("Pick an item")
+    for item in items:
+        if x.lower() == item["name"].lower():
+            ItemReal = True
+            cart.append(x)
+            Price += item["price"]
+    if ItemReal == False:
+        print ("I dont think that exists")
+    Price += (item["price"])
+    ItemReal = False
+    y = input("Is that all? yes/no")
+    if y == "yes":
+        done = True
+        print("Ok, pay up")
+        done = True
+        if done == True:
+            break
+Price -= 25
+print(cart)
+print(f"Okay, your total is {Price} dollars.")
 
 
 
 
-""" 
-Total = 0
-Duped = 0
-(yest, tod) = ("CC.C...", "..CC...")
-Space = (yest, tod)
-YEST = list(yest)
-TOD = list(tod)
 
-for char in YEST:
-    Total += 1
-    print (Total)
-
-for i in range (0, Total):
-    if YEST[i] == "C" and TOD[i] == "C":
-        Duped += 1
-print(Duped)
-
-        
- """
-
-""" Duped = 0
-(yest, tod) = ("CCCCCCC", "C.C.C.C")
-
-for i in range (len(yest)):
-    if yest[i] == "C" and tod[i] == "C":
-        Duped += 1
-print(Duped)
- """
-
-
-""" 
-l = 0
-notl = 0
-x = input("Yo yo what you gotta say?")
-for i in range (len(x)):
-    if x[i] == "l":
-        l += 1
-    elif x[i] in "qwertyuiopasdfghjkzxcvbnm":
-        notl += 1
-   
-if l >= (notl / 5):
-    print ("Love Letter")
-else:
-    print ("Just talking")
- """
-
-Total = 0
-HONI = 0
-Clause = ("HONIHONIOHINOHIONOOHIONIOHIOINOHIOHIONIH")
-length = (len(Clause))
-for i in range (length):
-    if Clause[i] == "H" and HONI == 0:
-        HONI += 1
-    if Clause[i] == "O" and HONI == 1:
-        HONI += 1
-    if Clause[i] == "N" and HONI == 2:
-        HONI += 1
-    if Clause[i] == "I" and HONI == 3:
-        HONI = 0
-        Total += 1
-print (Total)
